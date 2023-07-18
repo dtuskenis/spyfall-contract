@@ -4,6 +4,8 @@ interface RoomsManager {
 
     suspend fun search(): List<Room>
 
+    suspend fun find(input: FindRoomInput): FindRoomResult
+
     suspend fun create(input: CreateRoomInput): RoomId
 
     suspend fun join(input: JoinRoomInput): JoinRoomResult
